@@ -4,7 +4,7 @@
 		<title>Finservice.pro</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/style.min.css" />
 	</head>
 	<body>
 		<section class="header">
@@ -25,12 +25,33 @@
 			<a href="/" class="logo hidden-xs"></a>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">FAQ</a></li>
-				<li><a href="#">КАБИНЕТ</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#login-form">КАБИНЕТ</a></li>
 				<li><a href="#">КОНТАКТЫ</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
+<div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="modalLabel">Вход</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Логин" />
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" placeholder="Пароль" />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">Войти</button>
+			</div>
+		</div>
+	</div>
+</div>
 	<div class="header-bg header-background"></div>
 	<div class="header-bg header-gradient"></div>
 	<div class="container">
@@ -39,7 +60,6 @@
 				<span class="poslogic">POSLOGIC</span> – современная<br>
 				платформа кредитования<br>
 				в точках продаж<br>
-
 				<div class="header-small wow slideInLeft" data-wow-duration="0.6s">
 					Работает на любой операционной системе.
 				</div>
@@ -311,25 +331,25 @@
 		<section class="clients">
 	<div class="container-fluid">
 		<hr />
-		<a href="#" class="client">
+		<a class="client">
 			<img src="/images/image3.png" alt="" />
 		</a>
-		<a href="#" class="client">
+		<a class="client">
 			<img src="/images/image4.png" alt="" />
 		</a>
-		<a href="#" class="client">
+		<a class="client">
 			<img src="/images/image5.png" alt="" />
 		</a>
-		<a href="#" class="client">
+		<a class="client">
 			<img src="/images/image6.png" alt="" />
 		</a>
-		<a href="#" class="client">
+		<a class="client">
 			<img src="/images/image7.png" alt="" />
 		</a>
-		<a href="#" class="client">
+		<a class="client">
 			<img src="/images/image8.png" alt="" />
 		</a>
-		<a href="#" class="client">
+		<a class="client">
 			<img src="/images/image9.png" alt="" />
 		</a>
 	</div>
@@ -351,6 +371,6 @@
 </footer>
 
 
-		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/app.min.js"></script>
 	</body>
 </html>

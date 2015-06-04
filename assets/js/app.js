@@ -12037,6 +12037,13 @@ if (typeof jQuery === 'undefined') {
 
 }).call(this);
 
-$(function(){
+$(function() {
 	new WOW().init();
+
+	$(".header-btn").click(function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $(".contact").offset().top
+		}, 666);
+	});
 });

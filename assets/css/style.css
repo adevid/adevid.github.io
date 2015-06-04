@@ -9898,6 +9898,17 @@ a,
   transition-duration: .3s;
 }
 
+/* line 24, ../../../src/scss/style.scss */
+.btn-primary {
+  background-color: #489E9E;
+  border-color: #3A8C8C;
+}
+/* line 28, ../../../src/scss/style.scss */
+.btn-primary:hover {
+  background-color: #316767;
+  border-color: #316767;
+}
+
 /* line 1, ../../../src/scss/components/_nav.scss */
 nav {
   border: none;
@@ -9952,19 +9963,20 @@ nav {
   transition-duration: .3s;
 }
 /* line 42, ../../../src/scss/components/_nav.scss */
-.navbar-nav > li > a:hover {
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
   background: transparent;
   opacity: 1;
+  outline-color: #489E9E;
 }
 
-/* line 47, ../../../src/scss/components/_nav.scss */
+/* line 49, ../../../src/scss/components/_nav.scss */
 .navbar-collapse {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
 
 @media (max-width: 767px) {
-  /* line 53, ../../../src/scss/components/_nav.scss */
+  /* line 55, ../../../src/scss/components/_nav.scss */
   .navbar-nav > li {
     padding: 0;
   }
@@ -10327,8 +10339,9 @@ textarea {
   width: 14%;
   height: 10rem;
   text-align: center;
+  cursor: default;
 }
-/* line 18, ../../../src/scss/components/_clients.scss */
+/* line 19, ../../../src/scss/components/_clients.scss */
 .client img {
   max-width: 100%;
   max-height: 10rem;
@@ -10337,7 +10350,7 @@ textarea {
   transition-duration: .5s;
   opacity: .5;
 }
-/* line 25, ../../../src/scss/components/_clients.scss */
+/* line 26, ../../../src/scss/components/_clients.scss */
 .client img:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
@@ -10345,12 +10358,12 @@ textarea {
 }
 
 @media (max-width: 767px) {
-  /* line 33, ../../../src/scss/components/_clients.scss */
+  /* line 34, ../../../src/scss/components/_clients.scss */
   .client:last-child {
     display: none;
   }
 
-  /* line 36, ../../../src/scss/components/_clients.scss */
+  /* line 37, ../../../src/scss/components/_clients.scss */
   .client {
     height: auto;
   }
