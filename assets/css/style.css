@@ -9957,8 +9957,14 @@ nav {
   opacity: 1;
 }
 
+/* line 47, ../../../src/scss/components/_nav.scss */
+.navbar-collapse {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 @media (max-width: 767px) {
-  /* line 49, ../../../src/scss/components/_nav.scss */
+  /* line 53, ../../../src/scss/components/_nav.scss */
   .navbar-nav > li {
     padding: 0;
   }
@@ -10040,8 +10046,9 @@ nav {
   color: #489E9E;
 }
 
-/* line 5, ../../../src/scss/components/_advantages.scss */
-.icon, .icons-chart, .icons-coffee, .icons-dollar, .icons-switchers {
+/* line 3, ../../../src/scss/components/_advantages.scss */
+.icon {
+  background-image: url(/images/icons.png);
   display: inline-block;
   width: 4.9rem;
   height: 4.8rem;
@@ -10051,54 +10058,28 @@ nav {
   background-size: cover;
 }
 
-/* line 72, icons/*.png */
-.icon, .icons-chart, .icons-coffee, .icons-dollar, .icons-switchers {
-  background-image: url('/images/icons-s9add0d0600.png');
-  background-repeat: no-repeat;
-}
-
-/* line 84, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-chart {
-  background-position: 0 0;
-}
-
-/* line 84, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-coffee {
-  background-position: 0 -90px;
-}
-
-/* line 84, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-dollar {
-  background-position: 0 -180px;
-}
-
-/* line 84, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-switchers {
-  background-position: 0 -270px;
-}
-
-/* line 19, ../../../src/scss/components/_advantages.scss */
+/* line 14, ../../../src/scss/components/_advantages.scss */
 .icons-dollar {
   background-position: 0px -97px;
 }
 
-/* line 22, ../../../src/scss/components/_advantages.scss */
+/* line 17, ../../../src/scss/components/_advantages.scss */
 .icons-coffee {
-  background-position: 0 -49px;
+  background-position: 0 -48px;
 }
 
-/* line 28, ../../../src/scss/components/_advantages.scss */
+/* line 23, ../../../src/scss/components/_advantages.scss */
 .icons-swithers {
-  background-position: 0 -146px;
+  background-position: 0 -145px;
 }
 
-/* line 32, ../../../src/scss/components/_advantages.scss */
+/* line 27, ../../../src/scss/components/_advantages.scss */
 .advantages {
   text-align: center;
   margin-bottom: 5rem;
 }
 
-/* line 36, ../../../src/scss/components/_advantages.scss */
+/* line 31, ../../../src/scss/components/_advantages.scss */
 .advantages-header {
   text-transform: uppercase;
   margin: 5rem 0;
@@ -10107,12 +10088,12 @@ nav {
   color: #489E9E;
 }
 
-/* line 43, ../../../src/scss/components/_advantages.scss */
+/* line 38, ../../../src/scss/components/_advantages.scss */
 .advantage-icon {
   margin-top: 3rem;
 }
 
-/* line 46, ../../../src/scss/components/_advantages.scss */
+/* line 41, ../../../src/scss/components/_advantages.scss */
 .advantage-title {
   font-weight: bold;
   font-size: 2rem;
@@ -10121,12 +10102,12 @@ nav {
 }
 
 @media (max-width: 767px) {
-  /* line 53, ../../../src/scss/components/_advantages.scss */
+  /* line 48, ../../../src/scss/components/_advantages.scss */
   .advantage-title {
     margin-top: 2rem;
   }
 
-  /* line 56, ../../../src/scss/components/_advantages.scss */
+  /* line 51, ../../../src/scss/components/_advantages.scss */
   .advantage-icon {
     display: none;
   }
