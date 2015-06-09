@@ -10085,29 +10085,29 @@ nav {
 
 /* line 3, ../../../src/scss/components/_advantages.scss */
 .icon {
-  background-image: url(/images/icons.svg);
   display: inline-block;
-  width: 9rem;
-  height: 9rem;
+  width: 120px;
+  height: 120px;
   margin-bottom: 5rem;
   position: relative;
   vertical-align: text-bottom;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/images/icons.svg);
 }
 
 /* line 14, ../../../src/scss/components/_advantages.scss */
 .icons-dollar {
-  background-position: 0px -175px;
+  background-position: 0px -240px;
 }
 
 /* line 17, ../../../src/scss/components/_advantages.scss */
 .icons-coffee {
-  background-position: 0 -88px;
+  background-position: 0 -120px;
 }
 
 /* line 23, ../../../src/scss/components/_advantages.scss */
 .icons-swithers {
-  background-position: 0 90px;
+  background-position: 0 -360px;
 }
 
 /* line 27, ../../../src/scss/components/_advantages.scss */
@@ -10211,8 +10211,8 @@ nav {
 /* line 23, ../../../src/scss/components/_profit.scss */
 .mockup {
   border: 2px solid #489E9E;
-  border-radius: 2rem 2rem 0 0;
-  padding: 2rem;
+  border-radius: 2rem;
+  padding: 2rem 2rem 8rem;
   position: absolute;
   top: 7rem;
   left: 5rem;
@@ -10221,17 +10221,15 @@ nav {
 .mockup:after {
   display: block;
   width: 100%;
-  padding: 4rem;
-  border: 2px solid #489E9E;
-  border-radius: 0 0 2rem 2rem;
-  border-top: none !important;
+  height: 2px;
   position: absolute;
-  bottom: -8rem;
-  left: -2px;
+  background-color: #489E9E;
+  bottom: 7.5rem;
+  left: 0;
   content: "";
 }
 
-/* line 45, ../../../src/scss/components/_profit.scss */
+/* line 43, ../../../src/scss/components/_profit.scss */
 .mockup-circle {
   border-radius: 50%;
   background-color: #489E9E;
@@ -10239,14 +10237,14 @@ nav {
   width: 2rem;
   height: 2rem;
   position: relative;
-  top: 7rem;
+  top: 5rem;
 }
 
-/* line 54, ../../../src/scss/components/_profit.scss */
+/* line 52, ../../../src/scss/components/_profit.scss */
 .mockup-inner {
   border: 2px solid #489E9E;
 }
-/* line 57, ../../../src/scss/components/_profit.scss */
+/* line 55, ../../../src/scss/components/_profit.scss */
 .mockup-inner img {
   max-height: 45rem;
 }
