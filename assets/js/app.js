@@ -12046,4 +12046,41 @@ $(function() {
 			scrollTop: $(".contact").offset().top
 		}, 666);
 	});
+
+	$(".contact-link").click(function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $("footer").offset().top
+		}, 666);
+	});
+
+	$('#contact-form').submit(function(e) {
+
+		e.preventDefault();
+		var data = $(this).serialize();
+		$('.form-control').parent().removeClass('has-error');
+
+		$.ajax({
+			url: '/mail.php',
+			method: 'POST',
+			data: data,
+			dataType: "json",
+			success: function(data) {
+				$("#errors").hide().html("");
+				$('#contact-form').hide();
+				$('#success').show();
+			},
+			error: function(data) {
+				$("#errors").html("");
+				if (data.responseJSON == false) {
+					$("#errors").text("Неизвестная ошибка");
+				}
+				for (var key in data.responseJSON) {
+					$("[name='" + key + "']").parent().addClass('has-error');
+					$("#errors").append("<p>" + data.responseJSON[key] + "</p>");
+				}
+				$("#errors").show();
+			}
+		});
+	});
 });

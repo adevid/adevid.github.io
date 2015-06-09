@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Finservice.pro</title>
+		<title>Poslogic.pro</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/style.min.css" />
@@ -26,7 +26,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">FAQ</a></li>
 				<li><a href="#" data-toggle="modal" data-target="#login-form">КАБИНЕТ</a></li>
-				<li><a href="#">КОНТАКТЫ</a></li>
+				<li><a href="#" class="contact-link">КОНТАКТЫ</a></li>
 			</ul>
 		</div>
 	</div>
@@ -56,7 +56,7 @@
 	<div class="header-bg header-gradient"></div>
 	<div class="container">
 		<div class="row header-content">
-			<div class="col-md-6 col-md-offset-2 wow slideInLeft" data-wow-duration="0.5s">
+			<div class="col-md-6 wow slideInLeft" data-wow-duration="0.5s">
 				<span class="poslogic">POSLOGIC</span> – современная<br>
 				платформа кредитования<br>
 				в точках продаж<br>
@@ -200,6 +200,7 @@
 					<div class="mockup-inner">
 						<img src="images/image11.png"/>
 					</div>
+					<div class="mockup-circle"></div>
 				</div>
 			</div>
 		</div>
@@ -299,31 +300,43 @@
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<h3 class="contact-title">Напишите нам</h3>
-				<form action="">
+				<form method="POST" id="contact-form">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Имя"/>
+								<input type="text" name="name" class="form-control" placeholder="Имя" required/>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="E-mail"/>
+								<input type="text" name="email" class="form-control" placeholder="E-mail" required/>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Тема"/>
+							<div class="form-group ">
+								<input type="text" name="title" class="form-control" placeholder="Тема" required/>
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" placeholder="Сообщение"></textarea>
+								<textarea class="form-control" name="message" placeholder="Сообщение" required></textarea>
 							</div>
-							<button class="btn btn-default form-submit">Отправить</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-default form-submit btn-sm">Отправить</button>
+						</div>
+						<div class="col-md-6">
+							<div class="alert alert-danger" id="errors">
+
+							</div>
 						</div>
 					</div>
 				</form>
+				<div class="alert alert-success" id="success">
+					Спасибо, ваше сообщение отправлено.
+				</div>
 			</div>
 		</div>
 	</div>
@@ -369,7 +382,6 @@
 		</div>
 	</div>
 </footer>
-
 
 		<script type="text/javascript" src="assets/js/app.min.js"></script>
 	</body>

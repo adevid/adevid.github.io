@@ -9943,6 +9943,13 @@ nav {
 }
 
 /* line 27, ../../../src/scss/components/_nav.scss */
+.logo {
+  margin-top: 0;
+  position: relative;
+  top: -2rem;
+}
+
+/* line 32, ../../../src/scss/components/_nav.scss */
 .brand-logo {
   margin-right: 0;
   margin: 0;
@@ -9950,35 +9957,53 @@ nav {
   height: 3rem;
 }
 
-/* line 33, ../../../src/scss/components/_nav.scss */
+/* line 38, ../../../src/scss/components/_nav.scss */
 .navbar-nav > li {
   padding: 2rem;
 }
 
-/* line 36, ../../../src/scss/components/_nav.scss */
+/* line 41, ../../../src/scss/components/_nav.scss */
 .navbar-nav > li > a {
   color: #fff;
   font-size: 1.6rem;
   opacity: .8;
   transition-duration: .3s;
 }
-/* line 42, ../../../src/scss/components/_nav.scss */
+/* line 47, ../../../src/scss/components/_nav.scss */
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
   background: transparent;
   opacity: 1;
   outline-color: #489E9E;
 }
 
-/* line 49, ../../../src/scss/components/_nav.scss */
+/* line 54, ../../../src/scss/components/_nav.scss */
 .navbar-collapse {
   box-shadow: none;
   -webkit-box-shadow: none;
+  text-align: center;
+}
+
+/* line 59, ../../../src/scss/components/_nav.scss */
+.navbar-right {
+  float: none !important;
+  display: inline-block;
 }
 
 @media (max-width: 767px) {
-  /* line 55, ../../../src/scss/components/_nav.scss */
+  /* line 65, ../../../src/scss/components/_nav.scss */
   .navbar-nav > li {
     padding: 0;
+  }
+
+  /* line 68, ../../../src/scss/components/_nav.scss */
+  .navbar-collapse {
+    text-align: right;
+  }
+
+  /* line 71, ../../../src/scss/components/_nav.scss */
+  .navbar-right {
+    display: block !important;
+    float: right !important;
   }
 }
 /* line 1, ../../../src/scss/components/_header.scss */
@@ -10060,10 +10085,10 @@ nav {
 
 /* line 3, ../../../src/scss/components/_advantages.scss */
 .icon {
-  background-image: url(/images/icons.png);
+  background-image: url(/images/icons.svg);
   display: inline-block;
-  width: 4.9rem;
-  height: 4.8rem;
+  width: 9rem;
+  height: 9rem;
   margin-bottom: 5rem;
   position: relative;
   vertical-align: text-bottom;
@@ -10072,17 +10097,17 @@ nav {
 
 /* line 14, ../../../src/scss/components/_advantages.scss */
 .icons-dollar {
-  background-position: 0px -97px;
+  background-position: 0px -175px;
 }
 
 /* line 17, ../../../src/scss/components/_advantages.scss */
 .icons-coffee {
-  background-position: 0 -48px;
+  background-position: 0 -88px;
 }
 
 /* line 23, ../../../src/scss/components/_advantages.scss */
 .icons-swithers {
-  background-position: 0 -145px;
+  background-position: 0 90px;
 }
 
 /* line 27, ../../../src/scss/components/_advantages.scss */
@@ -10186,20 +10211,44 @@ nav {
 /* line 23, ../../../src/scss/components/_profit.scss */
 .mockup {
   border: 2px solid #489E9E;
-  border-radius: 2rem;
+  border-radius: 2rem 2rem 0 0;
   padding: 2rem;
   position: absolute;
   top: 7rem;
   left: 5rem;
 }
-
 /* line 31, ../../../src/scss/components/_profit.scss */
+.mockup:after {
+  display: block;
+  width: 100%;
+  padding: 4rem;
+  border: 2px solid #489E9E;
+  border-radius: 0 0 2rem 2rem;
+  border-top: none !important;
+  position: absolute;
+  bottom: -8rem;
+  left: -2px;
+  content: "";
+}
+
+/* line 45, ../../../src/scss/components/_profit.scss */
+.mockup-circle {
+  border-radius: 50%;
+  background-color: #489E9E;
+  margin: 0 auto;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 7rem;
+}
+
+/* line 54, ../../../src/scss/components/_profit.scss */
 .mockup-inner {
   border: 2px solid #489E9E;
 }
-/* line 34, ../../../src/scss/components/_profit.scss */
+/* line 57, ../../../src/scss/components/_profit.scss */
 .mockup-inner img {
-  max-height: 500px;
+  max-height: 45rem;
 }
 
 /* line 1, ../../../src/scss/components/_compare.scss */
@@ -10300,15 +10349,14 @@ nav {
 
 /* line 11, ../../../src/scss/components/_contact.scss */
 .form-submit {
-  text-transform: uppercase;
-  border: none;
   background-color: #F2F2F2;
+  font-family: 'Lato-Regular', sans-serif;
+  text-transform: uppercase;
   color: #489E9E;
-  font-size: 1.8rem;
-  padding: 10px 20px;
+  border: none;
 }
 
-/* line 20, ../../../src/scss/components/_contact.scss */
+/* line 19, ../../../src/scss/components/_contact.scss */
 .form-control {
   border-color: #489E9E;
   border-width: 2px;
@@ -10317,9 +10365,19 @@ nav {
   padding: 10px 12px;
 }
 
-/* line 28, ../../../src/scss/components/_contact.scss */
+/* line 27, ../../../src/scss/components/_contact.scss */
 textarea {
   resize: vertical;
+}
+
+/* line 29, ../../../src/scss/components/_contact.scss */
+#errors {
+  display: none;
+}
+
+/* line 32, ../../../src/scss/components/_contact.scss */
+#success {
+  display: none;
 }
 
 /* line 3, ../../../src/scss/components/_clients.scss */
@@ -10343,7 +10401,7 @@ textarea {
 }
 /* line 19, ../../../src/scss/components/_clients.scss */
 .client img {
-  max-width: 100%;
+  max-width: 8rem;
   max-height: 10rem;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -10365,6 +10423,8 @@ textarea {
 
   /* line 37, ../../../src/scss/components/_clients.scss */
   .client {
+    width: 33.3333%;
+    margin-bottom: 2rem;
     height: auto;
   }
 }
