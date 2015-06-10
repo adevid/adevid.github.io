@@ -9944,12 +9944,11 @@ nav {
 
 /* line 27, ../../../src/scss/components/_nav.scss */
 .logo {
-  margin-top: 0;
   position: relative;
-  top: -2rem;
+  margin: 2rem auto 0;
 }
 
-/* line 32, ../../../src/scss/components/_nav.scss */
+/* line 31, ../../../src/scss/components/_nav.scss */
 .brand-logo {
   margin-right: 0;
   margin: 0;
@@ -9957,53 +9956,48 @@ nav {
   height: 3rem;
 }
 
-/* line 38, ../../../src/scss/components/_nav.scss */
+/* line 37, ../../../src/scss/components/_nav.scss */
 .navbar-nav > li {
   padding: 2rem;
 }
+/* line 40, ../../../src/scss/components/_nav.scss */
+.navbar-nav > li:last-child {
+  padding-right: 0;
+}
+/* line 43, ../../../src/scss/components/_nav.scss */
+.navbar-nav > li:last-child a {
+  padding-right: 0;
+}
 
-/* line 41, ../../../src/scss/components/_nav.scss */
+/* line 48, ../../../src/scss/components/_nav.scss */
 .navbar-nav > li > a {
   color: #fff;
   font-size: 1.6rem;
   opacity: .8;
   transition-duration: .3s;
 }
-/* line 47, ../../../src/scss/components/_nav.scss */
+/* line 54, ../../../src/scss/components/_nav.scss */
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
   background: transparent;
   opacity: 1;
   outline-color: #489E9E;
 }
 
-/* line 54, ../../../src/scss/components/_nav.scss */
+/* line 63, ../../../src/scss/components/_nav.scss */
 .navbar-collapse {
+  position: relative;
   box-shadow: none;
   -webkit-box-shadow: none;
-  text-align: center;
-}
-
-/* line 59, ../../../src/scss/components/_nav.scss */
-.navbar-right {
-  float: none !important;
-  display: inline-block;
 }
 
 @media (max-width: 767px) {
-  /* line 65, ../../../src/scss/components/_nav.scss */
+  /* line 70, ../../../src/scss/components/_nav.scss */
   .navbar-nav > li {
     padding: 0;
   }
-
-  /* line 68, ../../../src/scss/components/_nav.scss */
-  .navbar-collapse {
-    text-align: right;
-  }
-
-  /* line 71, ../../../src/scss/components/_nav.scss */
-  .navbar-right {
-    display: block !important;
-    float: right !important;
+  /* line 74, ../../../src/scss/components/_nav.scss */
+  .navbar-nav > li:last-child a {
+    padding-right: 1.5rem;
   }
 }
 /* line 1, ../../../src/scss/components/_header.scss */
@@ -10380,16 +10374,15 @@ textarea {
 
 /* line 3, ../../../src/scss/components/_clients.scss */
 .clients {
-  padding: 5rem 0;
   text-align: center;
 }
-/* line 7, ../../../src/scss/components/_clients.scss */
+/* line 6, ../../../src/scss/components/_clients.scss */
 .clients hr {
   height: 2px;
   background-color: #489E9E;
 }
 
-/* line 12, ../../../src/scss/components/_clients.scss */
+/* line 11, ../../../src/scss/components/_clients.scss */
 .client {
   display: inline-block;
   width: 14%;
@@ -10397,7 +10390,7 @@ textarea {
   text-align: center;
   cursor: default;
 }
-/* line 19, ../../../src/scss/components/_clients.scss */
+/* line 18, ../../../src/scss/components/_clients.scss */
 .client img {
   max-width: 8rem;
   max-height: 10rem;
@@ -10406,20 +10399,25 @@ textarea {
   transition-duration: .5s;
   opacity: .5;
 }
-/* line 26, ../../../src/scss/components/_clients.scss */
+/* line 25, ../../../src/scss/components/_clients.scss */
 .client img:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   opacity: 1;
 }
 
-@media (max-width: 767px) {
-  /* line 34, ../../../src/scss/components/_clients.scss */
-  .client:last-child {
-    display: none;
-  }
+/* line 32, ../../../src/scss/components/_clients.scss */
+.tooltip-inner {
+  background-color: #489E9E !important;
+}
 
-  /* line 37, ../../../src/scss/components/_clients.scss */
+/* line 33, ../../../src/scss/components/_clients.scss */
+.tooltip-arrow {
+  border-top-color: #489E9E !important;
+}
+
+@media (max-width: 767px) {
+  /* line 36, ../../../src/scss/components/_clients.scss */
   .client {
     width: 33.3333%;
     margin-bottom: 2rem;

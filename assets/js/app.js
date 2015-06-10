@@ -12054,6 +12054,10 @@ $(function() {
 		}, 666);
 	});
 
+	$(function() {
+		$('[data-toggle="tooltip"]').tooltip({container: 'body'});
+	})
+
 	$('#contact-form').submit(function(e) {
 
 		e.preventDefault();
